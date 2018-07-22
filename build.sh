@@ -15,7 +15,7 @@ mkdir -p ../log/success ../log/fail ~/rom
 PUSHBULLET_TOKEN=YOUR_ACCESS_TOKEN
 
 # ツイート用のハッシュタグを必要に応じて変えてください
-TWEET_TAG="madokaBuild"
+TWEET_TAG="AletheiaBuild"
 
 # 実行時の引数が正しいかチェック
 if [ $# -lt 2 ]; then
