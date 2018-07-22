@@ -20,4 +20,7 @@
     - Blog: [dev:mordiford](https://dev.maud.io)
 
 ## In my environment
-Now,lineage-15.1 builds are not working properly in my environment using aletheia(madoka).(Only?I DONT KNOW WHY IT ISNT WORKING).
+Now,lineage-15.1 builds are not working properly in my environment using aletheia(madoka).(Only?I DON’T KNOW WHY IT ISN’T WORKING).
+
+## Bugs?
+In lineageos,Zip renaming not working...Probably something wrong?
