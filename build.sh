@@ -40,9 +40,9 @@ case $argument in
 	   exit 1 ;;
 esac
 done
-
+# Set ccache size
 cd ../$builddir
-prebuilts/misc/linux-x86/ccache/ccache -M 30G
+prebuilts/misc/linux-x86/ccache/ccache -M 50G
 
 # repo sync
 if [ "$sync" = "true" ]; then
