@@ -1,4 +1,4 @@
-# Aletheia(Based on madokabuild)
+# Aletheia(Based on madoka)
 
 ## これなに
 
