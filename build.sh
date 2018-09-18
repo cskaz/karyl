@@ -87,6 +87,14 @@ elif [ $builddir = du ]; then
         zipname="$(get_build_var DU_VERSION)"
         newzipname="du_${device}_${vernum}-${filetime}-$(get_build_var DU_BUILD_TYPE)"
 
+# Lineage-16.0(ディレクトリ名はlos16)
+elif [ $builddir = los16 ]; then
+	vernum="$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)"
+	source="LineageOS ${vernum}"
+	short="${source}"
+	zipname="lineage-$(get_build_var LINEAGE_VERSION)"
+	newzipname="lineage-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var LINEAGE_BUILDTYPE}-$(device)"
+
 else
 # 一応対処するけど他ROMについては上記を参考にちゃんと書いてもらわないと後がめんどい
 	source=$builddir
