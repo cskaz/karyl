@@ -73,6 +73,7 @@ if [ $builddir = lineage ]; then
 	zipname="lineage-$(get_build_var LINEAGE_VERSION)"
 	newzipname="lineage-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var LINEAGE_BUILDTYPE}-$(device)"
 
+# aicp
 elif [ $builddir = aicp ]; then
 	vernum="$(get_build_var AICP_BRANCH)-$(get_build_var VERSION)"
 	source="AICP-${vernum}"
@@ -80,6 +81,7 @@ elif [ $builddir = aicp ]; then
 	zipname="$(get_build_var AICP_VERSION)"
 	newzipname="aicp_${device}_${vernum}-$(get_build_var AICP_BUILDTYPE)-${filetime}"
 
+# du
 elif [ $builddir = du ]; then
         vernum="$(get_build_var DU_BASE_VERSION)"
         source="DirtyUnicorns ${vernum}"
@@ -87,8 +89,16 @@ elif [ $builddir = du ]; then
         zipname="$(get_build_var DU_VERSION)"
         newzipname="du_${device}_${vernum}-${filetime}-$(get_build_var DU_BUILD_TYPE)"
 
-# Lineage-16.0(ディレクトリ名はlos16)
+# Lineage-16.0
 elif [ $builddir = los16 ]; then
+	vernum="$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)"
+	source="LineageOS ${vernum}"
+	short="${source}"
+	zipname="lineage-$(get_build_var LINEAGE_VERSION)"
+	newzipname="lineage-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var LINEAGE_BUILDTYPE}-$(device)"
+
+# /e/ 0.1
+elif [ $builddir = e ]; then
 	vernum="$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)"
 	source="LineageOS ${vernum}"
 	short="${source}"
