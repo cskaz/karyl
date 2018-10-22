@@ -102,8 +102,8 @@ elif [ $builddir = e ]; then
 	vernum="$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)"
 	source="e ${vernum}"
 	short="${source}"
-	zipname="e-$(get_build_var LINEAGE_VERSION)"
-	newzipname="e-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var LINEAGE_BUILDTYPE}-$(device)"
+	zipname="e-$(get_build_var E_VERSION)"
+	newzipname="e-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var E_BUILDTYPE}-$(device)"
 
 else
 # 一応対処するけど他ROMについては上記を参考にちゃんと書いてもらわないと後がめんどい
