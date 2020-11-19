@@ -15,7 +15,7 @@ mkdir -p ../log/success ../log/fail ~/rom
 PUSHBULLET_TOKEN=YOUR_ACCESS_TOKEN
 
 # ツイート用のハッシュタグを必要に応じて変えてください
-TWEET_TAG="AletheiaBuild"
+TWEET_TAG="KarylBuild"
 
 # 実行時の引数が正しいかチェック
 if [ $# -lt 2 ]; then
@@ -96,6 +96,15 @@ elif [ $builddir = los16 ]; then
 	short="${source}"
 	zipname="lineage-$(get_build_var LINEAGE_VERSION)"
 	newzipname="lineage-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var LINEAGE_BUILDTYPE}-$(device)"
+
+# Lineage-17.1
+elif [ $builddir = los17 ]; then
+	vernum="$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)"
+	source="LineageOS ${vernum}"
+	short="${source}"
+	zipname="lineage-$(get_build_var LINEAGE_VERSION)"
+	newzipname="lineage-$(get_build_var PRODUCT_VERSION_MAJOR).$(get_build_var PRODUCT_VERSION_MINOR)-${filetime}-${get_build_var LINEAGE_BUILDTYPE}-$(device)"
+
 
 # /e/ 0.1
 elif [ $builddir = e ]; then
